@@ -36783,7 +36783,7 @@
         }
       }
     },
-    "menu.play.verticalArrowsSeek": {
+    "menu.verticalArrowsSeek": {
       "localizations": {
         "de": {
           "stringUnit": {
@@ -36885,6 +36885,218 @@
           "stringUnit": {
             "state": "translated",
             "value": "使用 ↑/↓ 快轉/倒轉 30 秒"
+          }
+        }
+      }
+    },
+    "menu.play.forward30.arrow": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 Sekunden vor (↑ gedrückt halten zum Wiederholen)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forward 30 Seconds (↑ Hold to Repeat)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avanzar 30 segundos (↑ mantener para repetir)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avancer de 30 secondes (↑ maintenir pour répéter)"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maju 30 detik (tahan ↑ untuk mengulang)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avanti di 30 secondi (tieni premuto ↑ per ripetere)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 秒進む（↑ 長押しで連続）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30초 앞으로(↑ 길게 눌러 반복)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 seconden vooruit (↑ ingedrukt houden om te herhalen)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do przodu o 30 sekund (↑ przytrzymaj, aby powtarzać)"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avançar 30 segundos (↑ mantenha pressionado para repetir)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вперёд на 30 секунд (↑, удерживайте для повтора)"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไปข้างหน้า 30 วินาที (↑ กดค้างเพื่อข้ามต่อเนื่อง)"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 saniye ileri (↑ basılı tutarak sürekli)"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiến 30 giây (↑ giữ để tua liên tục)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前进 30 秒（↑ 按住连跳）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前進 30 秒（↑ 按住連續跳轉）"
+          }
+        }
+      }
+    },
+    "menu.play.backward30.arrow": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 Sekunden zurück (↓ gedrückt halten zum Wiederholen)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back 30 Seconds (↓ Hold to Repeat)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retroceder 30 segundos (↓ mantener para repetir)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reculer de 30 secondes (↓ maintenir pour répéter)"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mundur 30 detik (tahan ↓ untuk mengulang)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indietro di 30 secondi (tieni premuto ↓ per ripetere)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 秒戻る（↓ 長押しで連続）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30초 뒤로(↓ 길게 눌러 반복)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 seconden terug (↓ ingedrukt houden om te herhalen)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cofnij o 30 sekund (↓ przytrzymaj, aby powtarzać)"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retroceder 30 segundos (↓ mantenha pressionado para repetir)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назад на 30 секунд (↓, удерживайте для повтора)"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ถอยหลัง 30 วินาที (↓ กดค้างเพื่อข้ามต่อเนื่อง)"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 saniye geri (↓ basılı tutarak sürekli)"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lùi 30 giây (↓ giữ để tua liên tục)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "后退 30 秒（↓ 按住连跳）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "倒退 30 秒（↓ 按住連續跳轉）"
           }
         }
       }

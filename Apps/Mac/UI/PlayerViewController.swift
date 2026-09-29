@@ -3220,6 +3220,14 @@ final class PlayerViewController: NSViewController, SPPlayerCoreDelegate, NSMenu
             captionsRefreshMenuTitle(menuItem)
             return captionsMenuAvailable
         }
+        if menuItem.action == #selector(seekForwardBigAction(_:)) {
+            menuItem.title = L(SPUserPreferences.verticalArrowsSeek
+                               ? "menu.play.forward30.arrow" : "menu.play.forward30")
+        }
+        if menuItem.action == #selector(seekBackwardBigAction(_:)) {
+            menuItem.title = L(SPUserPreferences.verticalArrowsSeek
+                               ? "menu.play.backward30.arrow" : "menu.play.backward30")
+        }
         if menuItem.action == #selector(forcedAspectAction(_:)) ||
            menuItem.action == #selector(cropAspectAction(_:)) {
             return hasVideoSession

@@ -23,7 +23,7 @@ enum SPUserPreferences {
 
     /// When on, ↑/↓ seek ±30 s instead of changing the volume.
     static var verticalArrowsSeek: Bool {
-        get { UserDefaults.standard.object(forKey: verticalArrowsSeekKey) as? Bool ?? false }
+        get { UserDefaults.standard.object(forKey: verticalArrowsSeekKey) as? Bool ?? true }
         set { UserDefaults.standard.set(newValue, forKey: verticalArrowsSeekKey) }
     }
 }
