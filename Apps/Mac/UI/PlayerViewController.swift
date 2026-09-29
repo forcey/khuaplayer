@@ -1520,7 +1520,7 @@ final class PlayerViewController: NSViewController, SPPlayerCoreDelegate, NSMenu
 
         do {
             try SPMainThreadSentinel.phase("core.openMedia") {
-                if let resume, resume > 2 {
+                if SPUserPreferences.resumePlayback, let resume, resume > 2 {
                     try core.openMedia(at: url, startAt: resume)
                 } else {
                     try core.openMedia(at: url)
@@ -3463,7 +3463,8 @@ final class PlayerViewController: NSViewController, SPPlayerCoreDelegate, NSMenu
             return
         }
         // Play the boost invitation when the confirming key is released.
-        if event.keyCode == 126, volumeBoostPrompted, !volumeBoostUnlocked {
+        if event.keyCode == 126, !SPUserPreferences.verticalArrowsSeek,
+           volumeBoostPrompted, !volumeBoostUnlocked {
             chrome?.playVolumeBoostInvitation()
         }
 
@@ -3537,7 +3538,9 @@ final class PlayerViewController: NSViewController, SPPlayerCoreDelegate, NSMenu
 
     private static func turboAllowedKey(_ event: NSEvent) -> Bool {
         switch event.keyCode {
-        case 53, 125, 126: return true
+        case 53: return true
+        // ↑/↓ adjust volume during turbo, but seeking is blocked like ←/→.
+        case 125, 126: return !SPUserPreferences.verticalArrowsSeek
         default: break
         }
         switch event.charactersIgnoringModifiers {
@@ -3825,10 +3828,18 @@ final class PlayerViewController: NSViewController, SPPlayerCoreDelegate, NSMenu
             seekWithRepeat(-5, ownerKeyCode: event.keyCode)
             return
         case 126: // ↑
-            volumeWithRepeat(+5, ownerKeyCode: event.keyCode)
+            if SPUserPreferences.verticalArrowsSeek {
+                seekWithRepeat(+30, ownerKeyCode: event.keyCode)
+            } else {
+                volumeWithRepeat(+5, ownerKeyCode: event.keyCode)
+            }
             return
         case 125: // ↓
-            volumeWithRepeat(-5, ownerKeyCode: event.keyCode)
+            if SPUserPreferences.verticalArrowsSeek {
+                seekWithRepeat(-30, ownerKeyCode: event.keyCode)
+            } else {
+                volumeWithRepeat(-5, ownerKeyCode: event.keyCode)
+            }
             return
         default:
             break

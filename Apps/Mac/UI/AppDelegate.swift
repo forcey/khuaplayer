@@ -53,6 +53,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation {
             menuItem.title = CaptionTaskCenter.shared.menuTitle(forMedia: nil)
             return CaptionTaskCenter.shared.backgroundTask != nil
         }
+        switch menuItem.action {
+        case #selector(toggleRecordHistoryAction(_:)):
+            menuItem.state = SPUserPreferences.recordHistory ? .on : .off
+        case #selector(toggleResumePlaybackAction(_:)):
+            menuItem.state = SPUserPreferences.resumePlayback ? .on : .off
+        case #selector(toggleVerticalArrowsSeekAction(_:)):
+            menuItem.state = SPUserPreferences.verticalArrowsSeek ? .on : .off
+        default:
+            break
+        }
         return true
     }
 
@@ -405,6 +415,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation {
 
     @objc func turboRateAction(_ sender: NSMenuItem) {
         SPTurboSettings.rate = Double(sender.tag) / 100.0
+    }
+
+    @objc func toggleRecordHistoryAction(_ sender: Any?) {
+        SPUserPreferences.recordHistory.toggle()
+    }
+
+    @objc func toggleResumePlaybackAction(_ sender: Any?) {
+        SPUserPreferences.resumePlayback.toggle()
+    }
+
+    @objc func toggleVerticalArrowsSeekAction(_ sender: Any?) {
+        SPUserPreferences.verticalArrowsSeek.toggle()
     }
 
     @objc func timelineStyleAction(_ sender: NSMenuItem) {

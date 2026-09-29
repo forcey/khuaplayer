@@ -109,6 +109,7 @@ enum SPResumePositionStore {
             defaults.removeObject(forKey: key)
             return
         }
+        guard SPUserPreferences.recordHistory, SPUserPreferences.resumePlayback else { return }
         defaults.set(checkpoint.position, forKey: key)
     }
 }
@@ -179,6 +180,7 @@ enum RecentPlays {
 
     static func record(path: String, title: String, position: Double, duration: Double,
                        insert: Bool = true, defaults: UserDefaults = .standard) {
+        guard SPUserPreferences.recordHistory else { return }
         let existing = load(defaults: defaults)
         if !insert && !existing.contains(where: { $0.path == path }) {
             SPResumePositionIndex.touch(path: path, defaults: defaults)

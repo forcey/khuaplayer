@@ -57,6 +57,12 @@ enum MainMenuBuilder {
 #endif
         appMenu.addItem(.separator())
 
+        appMenu.addItem(withTitle: L("menu.recordHistory"),
+                        action: #selector(AppDelegate.toggleRecordHistoryAction(_:)),
+                        keyEquivalent: "")
+        appMenu.addItem(withTitle: L("menu.resumePlayback"),
+                        action: #selector(AppDelegate.toggleResumePlaybackAction(_:)),
+                        keyEquivalent: "")
         appMenu.addItem(withTitle: L("menu.clearHistory"),
                         action: #selector(AppDelegate.clearAllHistoryAction(_:)),
                         keyEquivalent: "")
@@ -97,6 +103,7 @@ enum MainMenuBuilder {
         playMenu.addItem(withTitle: L("menu.play.backward5"), action: #selector(PlayerViewController.seekBackwardAction(_:)), keyEquivalent: "")
         playMenu.addItem(withTitle: L("menu.play.forward30"), action: #selector(PlayerViewController.seekForwardBigAction(_:)), keyEquivalent: "")
         playMenu.addItem(withTitle: L("menu.play.backward30"), action: #selector(PlayerViewController.seekBackwardBigAction(_:)), keyEquivalent: "")
+        playMenu.addItem(withTitle: L("menu.play.verticalArrowsSeek"), action: #selector(AppDelegate.toggleVerticalArrowsSeekAction(_:)), keyEquivalent: "")
         playMenu.addItem(.separator())
 
         let turboItem = NSMenuItem(title: L("menu.turbo"), action: nil, keyEquivalent: "")
